@@ -1,0 +1,69 @@
+<div class="login-form">
+  <p-card
+    header="Iniciar sesión"
+    styleClass="ui-card-shadow text-center font-bold text-blue-800"
+    [ngStyle]="{ 'border-radius': '15px' }"
+  >
+    <div class="logo-container">
+      <p-image
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ24nLk58QTzBoefCkKmkZ0Pijyh0ygrc6isLAYPFhNlmeG9xHgxhihg_EGMUQuFNc6fw&usqp=CAU"
+        alt="Logo"
+        width="100"
+      ></p-image>
+    </div>
+    <!-- [formGroup]="loginForm" -->
+    <form (ngSubmit)="onLogin()">
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="username" class="m-1 font-bold text-blue-800"
+            >Usuario</label
+          >
+          <!-- formControlName="username" -->
+          <input
+            id="username"
+            class="m-1"
+            pInputText
+            placeholder="Ingrese nombre de usuario"
+          />
+        </div>
+        <div class="p-field">
+          <label for="password" class="font-bold text-blue-800"
+            >Contraseña</label
+          >
+          <!-- formControlName="password" -->
+          <p-password
+            id="password"
+            placeholder="Ingrese ontraseña"
+            [feedback]="false"
+          ></p-password>
+        </div>
+
+        <div class="p-field">
+          <button
+            pButton
+            type="submit"
+            label="Ingresar"
+            icon="pi pi-sign-in"
+            class="p-button-primary primary-text"
+            [rounded]="true"
+          ></button>
+        </div>
+      </div>
+    </form>
+  </p-card>
+  <!-- footer - banco central de reserva -->
+  <div class="text-center mt-5">
+    <p>
+      <small
+        >Banco Central de Reserva de El Salvador - 2024</small
+      >
+    </p>
+
+    <!-- imagen -->
+    <p-image
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb-GgM5e0Wh3H9eFSgD6jOnebmf4m-mSsncw&s"
+      alt="Logo BCRP"
+      width="150"
+    ></p-image>
+  </div>
+</div>
